@@ -1,0 +1,48 @@
+//posting a new post
+###
+POST http://localhost:4000/posts
+Content-Type: application/json
+
+{
+    "postDate":"2022-05-13T10:11:31.000+00:00",
+    "content":"this is a post generated from the api-calls.rest"
+}
+
+//updating a post
+###
+PUT http://localhost:4000/posts/629da1a2949c9077c9bb7abf
+Content-Type: application/json
+
+{
+    "userId":"bla",
+    "content":"update call"
+
+}
+
+//deleting a post
+###
+DELETE http://localhost:4000/posts/629da1a2949c9077c9bb7abf
+Content-Type: application/json
+
+{
+    "userId":"bla"
+
+}
+
+//like/dislike a post
+###
+PUT  http://localhost:4000/posts/6295b236c2b3d5fda66f34ef/like
+Content-Type: application/json
+
+{
+    "userId":"123"
+
+}
+
+###
+GET http://localhost:4000/posts/timeline
+Content-Type: application/json
+
+{
+    "userId":"628644f1dee0e6b4faa66d77"
+}

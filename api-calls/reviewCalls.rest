@@ -1,0 +1,55 @@
+//new review
+
+POST http://localhost:4000/reviews
+Content-Type: application/json
+
+{
+    "userId":"123",
+    "dateOfVisit":"2022-05-13T10:11:31.000+00:00",
+    "restaurantName":"Amore mio",
+    "numOfDishes":"4",
+    "dishesNames":["Rissoto","Pasta alfredo", "Tortelini","White cream Pizza"],
+    "totalRating":"5",
+    "foodRating":"3",
+    "serviceRating":"2",
+    "location":"Tel Aviv Yafo"
+    
+
+}
+
+
+
+//updating a review
+###
+PUT http://localhost:4000/reviews/629da2fe1e81f9ecda1d8253
+Content-Type: application/json
+
+{
+    "userId":"123",
+    "restaurantName":"update call",
+    "dishesNames":["Falafel", "French Fries"]
+
+}
+
+
+//deleting a review
+###
+DELETE http://localhost:4000/reviews/629da2fe1e81f9ecda1d8253
+Content-Type: application/json
+
+{
+    "userId":"123"
+
+}
+
+
+
+//like/dislike a review
+###
+PUT  http://localhost:4000/reviews/629da345fecfe2d9ffe111e7/like
+Content-Type: application/json
+
+{
+    "userId":"123"
+
+}

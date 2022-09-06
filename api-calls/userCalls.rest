@@ -1,0 +1,44 @@
+//Update user
+###
+PUT  http://localhost:4000/user/629da376fecfe2d9ffe111f0
+Content-Type: application/json
+
+{
+    "password":"321",
+    "userId":"629da376fecfe2d9ffe111f0"
+    
+}
+
+//Delete user
+###
+DELETE http://localhost:4000/user/629da376fecfe2d9ffe111f0
+Content-Type: application/json
+
+{
+    "userId":"629da376fecfe2d9ffe111f0"
+    
+    
+}
+
+//Get a user by ID
+###
+GET http://localhost:4000/user/629da339fecfe2d9ffe111e3
+
+
+//Follow user, the id in the url relates to the user we wish to follow
+###
+PUT http://localhost:4000/user/629da429fecfe2d9ffe111f9/follow
+Content-Type: application/json
+
+{
+    "userId":"629da339fecfe2d9ffe111e3"
+}
+
+//Unfollow user
+###
+PUT http://localhost:4000/user/629da429fecfe2d9ffe111f9/unfollow
+Content-Type: application/json
+
+{
+    "userId":"629da339fecfe2d9ffe111e3"
+}

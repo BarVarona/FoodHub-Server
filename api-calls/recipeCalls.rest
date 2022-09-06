@@ -1,0 +1,49 @@
+//new recipe
+
+POST http://localhost:4000/recipes
+Content-Type: application/json
+
+{
+    "userId":"123",
+    "dishName":"Pad Thai",
+    "numOfIngridients":"7",
+    "ingredients":["Chicken breast","Onions","Nodels","Pepper","Soy Sauce","Tariaki Sauce","Mushrooms"],
+    "instructions":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+
+}
+
+
+//updating a recipe
+###
+PUT http://localhost:4000/recipes/629da2ae1e81f9ecda1d8243
+Content-Type: application/json
+
+{
+    "userId":"123",
+    "dishName":"update call",
+    "ingredients":["Falafel", "French Fries"]
+
+}
+
+
+
+//deleting a recipe
+###
+DELETE http://localhost:4000/recipes/629da2ae1e81f9ecda1d8243
+Content-Type: application/json
+
+{
+    "userId":"123"
+
+}
+
+
+//like/dislike a recipe
+###
+PUT  http://localhost:4000/recipes/629da2d91e81f9ecda1d824b/like
+Content-Type: application/json
+
+{
+    "userId":"123"
+
+}
